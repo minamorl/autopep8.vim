@@ -3,7 +3,8 @@ set cpo&vim
 
 function! autopep8#clean()
   if executable("pep8")
-    let l:clean_source = system('autopep8 --aggressive --aggressive ' . bufname("%"))
+    let l:stdin = join(getline(1,'$'), "\n")
+    let l:clean_source = system('autopep8 --aggressive --aggressive - ', l:stdin)
     normal! ggVGd
     call append(0, split(l:clean_source, "\n"))
     normal! dd

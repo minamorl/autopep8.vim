@@ -5,9 +5,10 @@ function! autopep8#clean()
   if executable("pep8")
     let l:stdin = join(getline(1,'$'), "\n")
     let l:clean_source = system('autopep8 --aggressive --aggressive - ', l:stdin)
-    normal! ggVGd
-    call append(0, split(l:clean_source, "\n"))
-    normal! dd
+    let l:splitted = split(l:clean_source, "\n")
+    silent %d
+    call append(0, l:splitted)
+    silent $d
   else
     echo "autopep8 is not installed. \"pip autopep8\""
   endif

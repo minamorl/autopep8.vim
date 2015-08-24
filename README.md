@@ -17,6 +17,6 @@ Also you can manually install this script. (not recommended)
     
     autocmd vimrc FileType python nnoremap <buffer> <silent> <leader>t :call autopep8#clean()<CR>
     
-## Advance Usage
+## Advance
 
-autopep8.vim can specify argments to passing *autopep8* commands with `g:autopep8_args`. If `g:autopep8_args` is not defined, autopep8.vim uses `--aggressive --aggressive` as a default value. 
+autopep8.vim can specify argments to pass *autopep8* commands by `g:autopep8_args`. If `g:autopep8_args` is not defined, autopep8.vim uses `--aggressive --aggressive` as a default value. 

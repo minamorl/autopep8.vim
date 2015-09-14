@@ -1,22 +1,46 @@
 # autopep8.vim
 
-## Description
-**autopep8.vim** is a vim script, cleans up your python source code with autopep8.
+**autopep8.vim** - cleaning up python source code with autopep8.
 
-## Setup
+## Prerequisites
 
-This script depneds on autopep8. Before beginning the installation, please confirm that `autopep8` command exists on your environment.
+### Install latest autopep8
 
-If you are using NeoBundle, or any other bundler-like plugins, just write below in .vimrc:
+Before beginning the installation, please confirm that `autopep8` exists on your environment. If not, you can install autopep8 via pypi packages. Try `pip install autopep8 --upgrade`.
+
+## Installation
+
+
+### 1. Using packaging manager (Bundler/NeoBundle)
+If you are using NeoBundle, write below in .vimrc:
     
     NeoBundle 'minamorl/autopep8.vim'
 
-Also you can manually install this script. (not recommended)
+and execute `:NeoBundleInstall` starts installation process.
 
-## Configuration
+### 2. Manually Installation
+
+You can manually install this script (but not recommended). 
+
+Clone this repo, and copy all files under directory into your `~/.vim/`. 
+
+## Configuration 
+
+Add this line into in ~/.vimrc
     
-    autocmd vimrc FileType python nnoremap <buffer> <silent> <leader>t :call autopep8#clean()<CR>
-    
-## Advance
+```
+autocmd FileType python nnoremap <buffer> <silent> <leader>f :call autopep8#clean()<CR>
+```
+
+This scripts means map <leader>f to call autopep8.
+
+## Advanced Configurations
 
 autopep8.vim can specify argments to pass *autopep8* commands by `g:autopep8_args`. If `g:autopep8_args` is not defined, autopep8.vim uses `--aggressive --aggressive` as a default value. 
+
+If you do not want autopep8 to force keeping code under 80 columns, pass:
+
+```
+let g:autopep8_args = "--aggressive --aggressive --max-line-length=200"
+```
+ 

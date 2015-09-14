@@ -13,8 +13,10 @@ Before beginning the installation, please confirm that `autopep8` exists on your
 
 ### 1. Using packaging manager (Bundler/NeoBundle)
 If you are using NeoBundle, write below in .vimrc:
-    
-    NeoBundle 'minamorl/autopep8.vim'
+
+```VimL    
+NeoBundle 'minamorl/autopep8.vim'
+```
 
 and execute `:NeoBundleInstall` starts installation process.
 
@@ -28,7 +30,7 @@ Clone this repo, and copy all files under directory into your `~/.vim/`.
 
 Add this line into in ~/.vimrc
     
-```
+```VimL
 autocmd FileType python nnoremap <buffer> <silent> <leader>f :call autopep8#clean()<CR>
 ```
 
@@ -40,7 +42,7 @@ autopep8.vim can specify argments to pass *autopep8* commands by `g:autopep8_arg
 
 If you do not want autopep8 to force keeping code under 80 columns, pass:
 
-```
+```VimL
 let g:autopep8_args = "--aggressive --aggressive --max-line-length=200"
 ```
  

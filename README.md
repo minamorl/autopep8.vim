@@ -11,7 +11,7 @@ Before beginning the installation, please confirm that `autopep8` exists on your
 ## Installation
 
 
-### 1. Using packaging manager (Bundler/NeoBundle)
+### 1. Use package manager (Bundler/NeoBundle)
 If you are using NeoBundle, write below in .vimrc:
 
 ```VimL    
@@ -20,7 +20,7 @@ NeoBundle 'minamorl/autopep8.vim'
 
 and execute `:NeoBundleInstall` starts installation process.
 
-### 2. Manually Installation
+### 2. Manual Install
 
 You can manually install this script (but not recommended). 
 
@@ -36,7 +36,7 @@ autocmd FileType python nnoremap <buffer> <silent> <leader>f :call autopep8#clea
 
 This scripts means map <leader>f to call autopep8.
 
-## Advanced Configurations
+## Advanced Settings
 
 autopep8.vim can specify argments to pass *autopep8* commands by `g:autopep8_args`. If `g:autopep8_args` is not defined, autopep8.vim uses `--aggressive --aggressive` as a default value. 
 

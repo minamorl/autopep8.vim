@@ -20,7 +20,7 @@ NeoBundle 'minamorl/autopep8.vim'
 
 and execute `:NeoBundleInstall` starts installation process.
 
-### 2. Manual Install
+### 2. Manual Installation
 
 You can manually install this script (but not recommended). 
 
